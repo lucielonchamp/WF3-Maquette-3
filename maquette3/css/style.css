@@ -1,0 +1,170 @@
+/* Préparation font, double class etc */
+body {
+  color: #fff;
+  text-align: left;
+  background: #000;
+}
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.3rem;
+}
+.p {
+  font-size: small;
+  font-weight: bold;
+  margin: 1.5rem 0rem 1.5rem 0rem;
+}
+.btn {
+  font-weight: bold;
+  color: #fff;
+  text-decoration-line: underline;
+  text-decoration-color: #bfa165;
+  font-size: small;
+  text-underline-offset: 0.4rem;
+}
+h6 {
+  font-size: small;
+  font-style: italic;
+}
+
+/* position border décoration */
+.border-color {
+  position: absolute;
+  z-index: -1;
+  height: 125%;
+  width: 32%;
+  border-top: 8px solid #bfa165;
+  border-bottom: 8px solid #bfa165;
+  border-left: 8px solid #bfa165;
+  left: -4rem;
+  top: -2.5rem;
+}
+/* -------------------------------------------- header / navbar */
+header {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.842)
+    ),
+    url(../src/img/mountains-gfe32db6f1_1920.jpg);
+  background-repeat: no-repeat;
+  background-position: cover;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.burger-icon {
+  padding: 2rem 4rem 0 0;
+  width: 6.5rem;
+  height: 6.5rem;
+  fill: #fff;
+  align-self: flex-end;
+}
+/* ---------------------------------------------- Section description */
+header .desc {
+  position: relative;
+  z-index: 0;
+  height: 35%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8rem;
+}
+
+/* Texte et bouton */
+h5 {
+  font-size: 1rem;
+  background-color: #bfa1658f;
+  display: inline-block;
+  padding: 0.2rem 1.25rem 0.2rem 1.25rem;
+  margin: 0rem 3rem 3rem 0rem;
+}
+.p-desc {
+  width: 65%;
+  font-size: medium;
+}
+.btn-primary {
+  font-weight: bold;
+  color: #fff;
+  text-decoration-line: underline;
+  text-decoration-color: #fff;
+  font-size: medium;
+  text-underline-offset: 0.5rem;
+}
+/* -------------------------------------------- section article-1 */
+
+.article-1 {
+  background: linear-gradient(rgb(27, 27, 27), #000);
+  height: 75vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem 0rem 2rem 0rem;
+}
+.article-1 img {
+  height: 90%;
+  width: 20%;
+  object-fit: cover;
+}
+.article-1 .text {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.article-1 .border-2 {
+  position: absolute;
+  border-top: 8px solid #bfa165;
+  border-bottom: 8px solid #bfa165;
+  border-left: none;
+  border-right: 8px solid #bfa165;
+  z-index: +1;
+  height: 75%;
+  width: 20%;
+  top: 0;
+}
+/* --------------------------------------------- section article-2 */
+.article-2 {
+  height: 75vh;
+  background-image: url(../src/img/landscape-g7257646b2_1920.jpg);
+  background-position: cover;
+  background-position-y: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.article-2 .text {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
+  width: 32%;
+  margin-left: 6rem;
+}
+.article-2 .italic {
+  display: flex;
+  margin-right: 4rem;
+  margin-bottom: 2rem;
+  width: 25%;
+  align-self: flex-end;
+}
+.article-2 .italic h6 {
+  text-align: end;
+  width: 100%;
+}
+.article-2 h2 {
+  margin-bottom: 2rem;
+}
+.article-2 .border-3 {
+  position: absolute;
+  z-index: +1;
+  height: 80%;
+  width: 20%;
+}
