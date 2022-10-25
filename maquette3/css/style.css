@@ -111,7 +111,7 @@ h5 {
 /* postition section */
 .article-1 {
   background: linear-gradient(#1a1a1a, #000);
-  height: 60vh;
+  height: 70vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -119,13 +119,13 @@ h5 {
 }
 /* position img et text */
 .article-1 img {
-  height: 100%;
-  width: 30%;
+  height: 90%;
+  width: 25%;
   object-fit: cover;
 }
 .article-1 .text {
   position: relative;
-  width: 30%;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -141,7 +141,7 @@ h5 {
   z-index: +1;
   height: 27rem;
   width: 15rem;
-  top: 1.5rem;
+  top: 4rem;
   right: -2rem;
 }
 /* --------------------------------------------- section article-2 */
@@ -227,8 +227,9 @@ h3 {
   padding: 0;
 }
 .p-bold {
+  text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 0%;
   margin-bottom: 1rem;
   padding-top: 1rem;
@@ -252,7 +253,7 @@ h3 {
 .article-3 h6 {
   position: absolute;
   margin-top: 0.25rem;
-  bottom: 4.5rem;
+  bottom: 3.3rem;
 }
 .article-3 .img {
   position: relative;
@@ -272,7 +273,7 @@ h3 {
 .article-3 .img #bg-img {
   z-index: -1;
   position: absolute;
-  top: 6rem;
+  bottom: 3rem;
   left: 3rem;
 }
 /* gestion du border-color */
@@ -287,18 +288,18 @@ h3 {
   z-index: -1;
   width: 10rem;
   height: 10rem;
-  top: -3rem;
-  left: -3rem;
+  top: -4rem;
+  left: -4rem;
 }
 
-.article-3 .img .box .border-5 {
+.article-3 .img .border-5 {
   border-right: 8px solid #bfa165;
   border-bottom: 8px solid #bfa165;
   position: absolute;
   height: 10rem;
   width: 10rem;
-  bottom: 1rem;
-  right: -6rem;
+  bottom: -1rem;
+  right: -7rem;
 }
 
 /* --------------------------------------------------- form */
@@ -400,23 +401,239 @@ h3 {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-}
+  .burger-icon {
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-right: -1.9rem;
+    margin-top: 0rem;
+  }
+  header .desc {
+    width: 100%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+  .p {
+    font-size: small;
+    width: 100%;
+  }
+  .btn {
+    font-size: smaller;
+  }
+  .p-desc {
+    width: 100%;
+  }
+  .desc h5 {
+    width: 80%;
+    font-size: small;
+  }
+  .desc .border-color {
+    height: 21rem;
+    width: 10rem;
+    left: -2rem;
+    top: -6rem;
+  }
+
+  .article-1 .text .border-2 {
+    height: 23rem;
+    left: -1rem;
+    top: 1.2rem;
+  }
+  .article-1 {
+    height: 100vh !important;
+  }
+  .article-2 {
+    height: 100vh !important;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
+  h5 {
+    margin: 0%;
+    width: 62%;
+  }
+  header {
+    height: 80vh;
+  }
+  header .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 70%;
+    margin-bottom: 6rem;
+  }
+  .border-color {
+    height: 24rem;
+    width: 16rem;
+    left: -3rem;
+    top: -7.5rem;
+  }
+
+  .article-1 {
+    background: #1a1a1a;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0%;
+  }
+  .article-1 img {
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .article-1 .text {
+    width: 80%;
+    height: 80%;
+  }
+  .article-1 .border-2 {
+    border-left: 8px solid #bfa165;
+    border-right: none;
+    height: 20rem;
+    width: 15rem;
+    top: 4.2rem;
+    left: -2rem;
+  }
+  .article-2 {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .article-2 .text {
+    width: 80%;
+    margin: 0%;
+  }
+  .article-2 .italic {
+    width: 50%;
+  }
+  .article-3 {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .article-3 .text {
+    width: 80%;
+    padding: 0%;
+  }
+  .article-3 .img {
+    width: 80%;
+  }
+  .article-3 .img #bg-img {
+    z-index: -1;
+    position: absolute;
+    bottom: 2.2rem;
+    left: 2rem;
+  }
+  .article-3 h6 {
+    margin-top: 0.25rem;
+    bottom: 2.2rem;
+  }
+  .article-3 .p {
+    margin-top: 0%;
+  }
+  .article-3 .text .box .border-4 {
+    width: 5rem;
+    height: 5rem;
+    top: -2rem;
+    left: -2rem;
+  }
+
+  .article-3 .img .border-5 {
+    height: 5rem;
+    width: 5rem;
+    bottom: 0rem;
+    right: -4rem;
+  }
+
+  .form .box .border-6 {
+    height: 5rem;
+    width: 5rem;
+    top: -3rem;
+    left: -3rem;
+  }
+  .form .btn-group .border-7 {
+    height: 5rem;
+    width: 5rem;
+    bottom: -1rem;
+    right: -13rem;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 992px) {
+  .p {
+    margin: 1rem 0rem 1rem 0rem;
+  }
+  .article-1 .border-2 {
+    height: 30rem;
+    top: 3rem;
+    width: 12rem;
+  }
+
+  .article-2 .box {
+    margin: 0rem;
+  }
+
+  .article-3 .text .box {
+    margin-bottom: 0%;
+  }
+  .form .box .border-6 {
+    top: -3rem;
+    left: -10rem;
+  }
+  .form .btn-group .border-7 {
+    bottom: -2rem;
+    right: -20rem;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
+  /* Pas besoin pour le moment */
 }
 /* up */
-@media only screen and (min-width: 1500px) {
+@media screen and ((min-width: 1530px) and (max-width: 1919px)) {
+  .border-color {
+    height: 25rem;
+  }
+  .article-1 .border-2 {
+    top: 3rem;
+  }
+  .article-3 .text .box .border-4 {
+    width: 10rem;
+    height: 10rem;
+    top: -4rem;
+    left: -4rem;
+  }
+
+  .article-3 h6 {
+    bottom: 3.5rem;
+  }
+
+  .article-1,
+  .article-2,
+  .numbers,
+  .article-3 {
+    height: 80vh;
+  }
+  .form {
+    height: 90vh;
+  }
+}
+@media screen and ((min-width: 1px) and (max-width: 992px)) {
+  .numbers {
+    height: 90vh;
+  }
+  .container-numbers {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
 }
