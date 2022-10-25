@@ -1,10 +1,13 @@
-/* Préparation font, double class etc */
+/* ############################ reste a faire  ################################ */
+
+/* ----------------------------------------- Préparation font, double class etc */
 body {
   color: #fff;
   text-align: left;
-  background: #000;
+  background-color: #1a1a1a;
 }
 h1 {
+  margin-top: 2rem;
   font-size: 3.5rem;
 }
 h2 {
@@ -12,10 +15,19 @@ h2 {
   font-weight: bold;
   font-size: 2.3rem;
 }
+h6 {
+  font-size: small;
+  font-style: italic;
+  text-align: end;
+  width: 100%;
+}
 .p {
   font-size: small;
   font-weight: bold;
-  margin: 1.5rem 0rem 1.5rem 0rem;
+  margin: 2rem 0rem 2rem 0rem;
+}
+span {
+  color: #bfa165;
 }
 .btn {
   font-weight: bold;
@@ -25,22 +37,29 @@ h2 {
   font-size: small;
   text-underline-offset: 0.4rem;
 }
-h6 {
-  font-size: small;
-  font-style: italic;
+.btn-primary:hover,
+.btn-secondary:hover {
+  color: #bfa165;
+}
+.btn-tertiary:hover {
+  background: #635334;
+  color: fff;
+  text-decoration: none;
 }
 
 /* position border décoration */
 .border-color {
-  position: absolute;
-  z-index: -1;
-  height: 125%;
-  width: 32%;
-  border-top: 8px solid #bfa165;
-  border-bottom: 8px solid #bfa165;
-  border-left: 8px solid #bfa165;
-  left: -4rem;
-  top: -2.5rem;
+  border: 8px solid;
+  border-image-slice: 1;
+  border-width: 8px;
+  border-image-source: linear-gradient(
+    to right,
+    #bfa165 25%,
+    #00000000 25%,
+    #00000000 25%,
+    #00000000 25%
+  );
+  padding: 3rem;
 }
 /* -------------------------------------------- header / navbar */
 header {
@@ -65,9 +84,7 @@ header {
 }
 /* ---------------------------------------------- Section description */
 header .desc {
-  position: relative;
-  z-index: 0;
-  height: 35%;
+  height: 32%;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -95,58 +112,56 @@ h5 {
   text-underline-offset: 0.5rem;
 }
 /* -------------------------------------------- section article-1 */
-
+/* postition section */
 .article-1 {
-  background: linear-gradient(rgb(27, 27, 27), #000);
-  height: 75vh;
+  background: linear-gradient(#1a1a1a, #000);
+  height: 70vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 2rem 0rem 2rem 0rem;
 }
+/* position img et text */
 .article-1 img {
   height: 90%;
-  width: 20%;
+  width: 25%;
   object-fit: cover;
 }
 .article-1 .text {
-  position: relative;
-  width: 30%;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.article-1 .border-2 {
-  position: absolute;
-  border-top: 8px solid #bfa165;
-  border-bottom: 8px solid #bfa165;
-  border-left: none;
-  border-right: 8px solid #bfa165;
-  z-index: +1;
-  height: 75%;
-  width: 20%;
-  top: 0;
+.article-1 .text .border-2 {
+  border: 8px solid;
+  border-image-slice: 1;
+  border-width: 8px;
+  border-image-source: linear-gradient(to left, #bfa165 60%, #00000000 40%);
+  padding: 3rem;
 }
+
 /* --------------------------------------------- section article-2 */
+/* background et taille de section */
 .article-2 {
-  height: 75vh;
-  background-image: url(../src/img/landscape-g7257646b2_1920.jpg);
+  height: 60vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.37)),
+    url(../src/img/landscape-g7257646b2_1920.jpg);
   background-position: cover;
   background-position-y: bottom;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+/* taille des textes et font-size */
 .article-2 .text {
-  position: relative;
-  z-index: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 80%;
-  width: 32%;
-  margin-left: 6rem;
+  width: 40%;
+  margin-left: 9rem;
 }
 .article-2 .italic {
   display: flex;
@@ -155,16 +170,585 @@ h5 {
   width: 25%;
   align-self: flex-end;
 }
-.article-2 .italic h6 {
-  text-align: end;
-  width: 100%;
-}
 .article-2 h2 {
+  margin-bottom: 1.3rem;
+  width: 90%;
+}
+
+/* position border-color-3 */
+.article-2 .text .border-3 {
+  border: 8px solid;
+  border-image-slice: 1;
+  border-width: 8px;
+  border-image-source: linear-gradient(40deg, #bfa165 15%, #00000000 15%);
+  padding-left: 1.5rem;
+}
+.article-2 .p,
+.article-2 .btn {
+  padding-left: 2rem;
+}
+/* ------------------------------------------------------------ section numbers */
+/* boite */
+.numbers {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container-numbers {
+  display: flex;
+  margin-top: 3rem;
+}
+.content-1 {
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  margin: 1rem;
+  padding: 2rem;
+  border: 1px solid #bfa16531;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* contenu des boites */
+.h2-color {
+  color: #bfa165;
+  font-size: 3rem;
+}
+h3 {
+  font-size: 4rem;
+  color: rgb(191, 161, 101);
+  margin: 0;
+  padding: 0;
+}
+.p-bold {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0%;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+}
+/* ------------------------------------------------ section article-3 */
+/* positionnement des boites */
+.article-3 {
+  height: 60vh;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+.article-3 .border-4 {
+  border: 8px solid;
+  border-image-slice: 1;
+  border-width: 8px;
+  border-image-source: linear-gradient(
+    140deg,
+    #bfa165 5%,
+    #00000000 5%,
+    #00000000 95%,
+    #bfa165 95%
+  );
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.article-3 .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 80%;
+  padding-right: 4rem;
+}
+.article-3 h6 {
+  position: absolute;
+  margin-top: 0.25rem;
+  bottom: 3.3rem;
+}
+.article-3 .img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+}
+/* gestions des images */
+.article-3 .img img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.article-3 .img #bg-img {
+  z-index: -1;
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+}
+/* gestion du border-color */
+.article-3 .text .box {
+  position: relative;
   margin-bottom: 2rem;
 }
-.article-2 .border-3 {
-  position: absolute;
-  z-index: +1;
-  height: 80%;
+
+/* --------------------------------------------------- form */
+/* taille et bg */
+.form {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.603)),
+    url(../src/img/castelmezzano-gfd4f2a8f9_1920.jpg);
+  margin-top: 5rem;
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form form {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0rem 0rem 0rem;
+}
+.border-5 {
+  display: flex;
+  flex-direction: column;
+  border: 8px solid;
+  border-image-slice: 1;
+  border-width: 8px;
+  border-image-source: linear-gradient(
+    140deg,
+    #bfa165 5%,
+    #00000000 5%,
+    #00000000 95%,
+    #bfa165 95%
+  );
+  width: 60%;
+  align-items: center;
+}
+
+/* gestion des inputs */
+#name,
+#email,
+#message {
+  background: none;
+  width: 100%;
+  margin: 0.5rem 0rem 0.5rem 0;
+  padding: 0.8rem;
+  color: #fff;
+  border-radius: 5px;
+}
+#name:focus-visible,
+#email:focus-visible,
+#message:focus-visible {
+  outline: 2px solid #bfa165;
+}
+#message {
+  max-height: 15rem;
+  padding-bottom: 4rem;
+  resize: vertical;
+}
+.form-name,
+.form-email,
+.form-message {
+  width: 100%;
+}
+.btn-tertiary {
+  background-color: #bfa165;
+  border: none;
+  margin: 1rem;
+  padding: 0.6rem 1.7rem 0.6rem 1.7rem;
+}
+
+/* --------------------------------------------------------------- footer */
+
+.container-footer {
+  margin: 1.5rem 5rem 0rem 5rem;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.content-2 {
   width: 20%;
+  display: flex;
+  border-top: 1px solid #464646;
+}
+
+/* _________________________________________________________________ media screen */
+@media screen and ((min-width: 1px) and (max-width: 992px)) {
+  .article-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0%;
+    background: #1a1a1a;
+  }
+  .article-1 img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .article-1 .text {
+    width: 80%;
+    height: 80%;
+  }
+  .article-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .article-2 .text {
+    width: 80%;
+    margin: 0%;
+  }
+  .article-2 .italic {
+    width: 50%;
+  }
+  .article-3 .border-4 {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .article-3 .text {
+    width: 100%;
+    padding: 0%;
+  }
+  .article-3 .img {
+    width: 80%;
+  }
+
+  .numbers h2,
+  p.p-bold {
+    text-align: center;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .burger-icon {
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-right: -1.9rem;
+    margin-top: 0rem;
+  }
+  header {
+    height: 100vh;
+  }
+  header .desc .border-color {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-image-source: linear-gradient(to right, #bfa165 50%, #00000000 50%);
+    padding: 1rem 0rem 1rem 0rem;
+  }
+  h1 {
+    font-size: 2rem;
+    width: 80%;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  header .desc h5 {
+    font-size: x-small;
+    margin: 0%;
+  }
+  .p {
+    font-size: small;
+    width: 100%;
+    margin: 2rem 0rem 2rem 0rem;
+  }
+  .p-desc {
+    font-size: x-small;
+    margin: 1rem 0rem 1rem 0rem;
+    width: 80%;
+  }
+
+  .btn {
+    font-size: smaller;
+    width: 80%;
+  }
+  .numbers .p-bold {
+    margin: 0;
+  }
+  .desc h5 {
+    width: 80%;
+    font-size: small;
+  }
+
+  .article-1 img {
+    height: 40%;
+  }
+
+  .article-1 {
+    height: 100vh;
+  }
+  .article-1 .text .border-2 {
+    padding: 1rem;
+  }
+  .article-2 {
+    height: 80vh;
+    display: flex;
+  }
+  .article-2 .border-3 h2 {
+    margin-bottom: 0.5rem;
+  }
+  .article-2 .text {
+    height: 80%;
+  }
+  .article-2 > * {
+    display: flex;
+    height: 80%;
+    justify-content: center;
+  }
+  .article-2 .text .border-3,
+  .article-2 .text .p,
+  .article-2 .text .btn {
+    padding-left: 0.5rem;
+  }
+  .article-2 .p {
+    padding: 1rem 0rem 1rem 1rem;
+  }
+  .article-2 .italic {
+    height: 10%;
+    margin-bottom: 0%;
+    align-items: flex-end;
+  }
+  .container-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .numbers {
+    height: 80vh;
+  }
+  .numbers .h2-color {
+    font-size: 1.5rem;
+  }
+  .numbers h3 {
+    font-size: 2rem;
+  }
+  .content-1 {
+    height: 8rem;
+    width: 8rem;
+    padding: 0.3rem;
+  }
+  .article-3 {
+    height: 100vh;
+  }
+  .article-3 .text .box .border-4 {
+    width: 5rem;
+    height: 5rem;
+    top: -1.5rem;
+    left: -1.5rem;
+  }
+  .article-3 .img {
+    height: 100%;
+  }
+  .article-3 .img img {
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .article-3 .img #bg-img {
+    bottom: 1rem;
+    left: 1rem;
+  }
+  .article-3 h6 {
+    position: absolute;
+    margin-top: 0.25rem;
+    bottom: 0.8rem;
+  }
+  .article-3 .img .border-5 {
+    height: 5rem;
+    width: 5rem;
+    bottom: -1rem;
+    right: -2rem;
+  }
+  .form .border-5 {
+    width: 90%;
+  }
+  .form .border-5 form {
+    width: 90%;
+  }
+  .container-footer {
+    margin: 0rem 2rem 0rem 2rem;
+  }
+  .container-footer .p-footer {
+    font-size: x-small;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .burger-icon {
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-right: -1.9rem;
+    margin-top: 0rem;
+  }
+  header {
+    height: 120vh;
+  }
+  header .desc .border-color {
+    border-image-source: linear-gradient(to right, #bfa165 50%, #00000000 50%);
+    padding-left: 1rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+    width: 80%;
+  }
+  h2,
+  .h2-color,
+  h3 {
+    font-size: 1.5rem;
+  }
+  .p {
+    font-size: smaller;
+    width: 100%;
+  }
+  .p-desc {
+    margin: 2rem 0rem 2rem 0rem;
+    width: 80%;
+  }
+  .btn {
+    font-size: smaller;
+    width: 80%;
+  }
+  .desc .border-color h5 {
+    width: 64%;
+    margin-left: 2rem;
+    align-self: flex-start;
+    font-size: small;
+  }
+  .article-1 .text .border-2 {
+    margin: 2rem 0rem 2rem 0rem;
+    padding: 1rem 1rem 1rem 0rem;
+  }
+  .container-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container-numbers .content-1 {
+    height: 10rem;
+    width: 10rem;
+    padding: 0.3rem;
+  }
+  .article-3 .img #bg-img {
+    bottom: 1rem;
+    left: 1rem;
+  }
+  .article-3 h6 {
+    bottom: 1rem;
+  }
+  .form .border-5 {
+    width: 80%;
+  }
+  .form .border-5 form {
+    width: 90%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .burger-icon {
+    padding: 2rem 4rem 0 0;
+    width: 6.5rem;
+    height: 6.5rem;
+    fill: #fff;
+    align-self: flex-end;
+  }
+  .numbers {
+    height: 40vh;
+  }
+  header {
+    height: 100vh;
+  }
+  .desc .border-color {
+    padding: 2rem 0rem 2rem 2rem;
+  }
+  .desc .border-color h5 {
+    margin: 0;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2.3rem;
+  }
+  .h2-color {
+    font-size: 2.3rem;
+  }
+  h3 {
+    font-size: 4rem;
+  }
+  .p {
+    font-size: small;
+  }
+  .p-bold {
+    font-size: 1.2rem;
+  }
+  .desc .border-color h5 {
+    width: 40%;
+  }
+  .article-1 .text .border-2 {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .article-1 img {
+    width: 40%;
+  }
+  .numbers {
+    height: 80vh;
+  }
+  .container-numbers .content-1 {
+    text-align: center;
+    height: 14rem;
+    width: 14rem;
+  }
+  .article-3 {
+    height: 50vh;
+  }
+  .article-3 .text {
+    width: 60%;
+  }
+  .article-3 .img #bg-img {
+    bottom: 3rem;
+    left: 1rem;
+  }
+  .article-3 h6 {
+    bottom: 3rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .border-color {
+    width: 80%;
+  }
+  .article-3 .img #bg-img {
+    bottom: 2rem;
+    left: 2rem;
+  }
+  .article-3 h6 {
+    bottom: 2.3rem;
+  }
+  .form .border-5 form {
+    width: 60%;
+  }
 }
